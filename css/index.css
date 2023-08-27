@@ -83,6 +83,9 @@ p, a {
     font-size: 3rem;
 }
 
+* {
+    color: white;
+}
 /* header section */
 header {
     width: 100%;
@@ -92,6 +95,31 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+header > div {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 4, 17, 0.8);
+}
+
+nav {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.social {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.social i {
+    font-size: 4em;
+    margin: 1% 4%;
+}
+
+
 
 /* spacers */
 .spacer {
@@ -111,6 +139,11 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+}
+
+.gallery img {
+    width: 25%;
+    margin: 2%;
 }
 
 /* about us section */
@@ -194,16 +227,63 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 2rem;
+    padding: 0 3%;
+}
+
+footer form {
+    width: 30%;
+    font-size: 3.2rem;
+    text-align: center;
+    padding-left: 3%;
+
+}
+
+footer input {
+    font-size: 3rem;
+    width: 60%;
+}
+
+footer button {
+    color: rgb(0, 4, 17);
+    font-size: 3rem;
+    padding: 0 5%;
 }
 
 /* mobile media query */
-@media (max-width: 428px) {
+@media (max-width: 500px) {
     /* header section */
-    
+    header h1{
+        text-align: center;
+    }
+    nav{
+        flex-direction: column;
+        align-content: center;
 
+    }
+
+    nav a {
+        text-align: center;
+    }
     /* gallery section */
     .gallery {
         height: auto;
+    }
+    
+    .gallery img {
+        width: 100%;
+        margin: 5% 0;
     }
     
     /* about us section */
@@ -249,5 +329,19 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+    footer div {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    footer form {
+        width: 100%;
+
+    }
+
+    .copyright {
+        text-align: center;
     }
 }
